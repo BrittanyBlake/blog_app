@@ -18,7 +18,7 @@
 </p>
 <p>
     <% if @article.image.exists?%>
-        <%= image_tag @article.image.url %>
+        <%= image_tag @article.image.url(:thumb) %>
     <% end %>
 </p>
 <p>
