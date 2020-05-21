@@ -4,7 +4,7 @@ class AuthorsController < ApplicationController
   before_action :require_login, except: %i[new create]
 
   def zero_authors_or_authenticated
-    unless Author.count == 0 || current_user
+    unless Author.count.zero? || current_user
       redirect_to root_path
       false
     end
